@@ -1,3 +1,4 @@
+package com.generics.A_why_use_generics;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +24,10 @@ public class WhyUseGenerics {
 		// when re-written o use generics, the code does not require casting:
 		List<String> list1 = new ArrayList<>();
 		list1.add("hello");
-		String s = list1.get(0);
+		String s = list1.get(0); // no cast
+		
+		// 3. By using generics programmers can implement generic algorithms that work on collections of different types, can be customized, and are type safe and easier to read
+		
 	}
 	
 }
