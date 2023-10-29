@@ -18,6 +18,27 @@ class Box<T>{
 	public T get() {return this.t;}
 }
 
+/**
+ * Multiple Type parameters
+ * */
+interface Pair<K, V>{
+	public K getKey();
+	public V getValue();
+}
+
+class OrderedPair<K, V> implements Pair<K, V>{
+	private K key;
+	private V value;
+	
+	public OrderedPair(K key, V value) {
+		this.key = key;
+		this.value = value;
+	}
+	
+	public K getKey() {return this.key;}
+	public V getValue() {return this.value;}
+}
+
 
 public class TestGenericTypes {
 
@@ -45,11 +66,10 @@ public class TestGenericTypes {
 	Box<Integer> integerBox; // you are passing a type argument
 	
 	
-	
-	
-	
-	
-	
+	public static void main(String[] args) {
+		Pair<String, Integer> p1 = new OrderedPair<String, Integer>("Even", 8);
+		
+	}
 	
 	
 	
